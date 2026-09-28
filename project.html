@@ -1,0 +1,361 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio - Projects</title>
+
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0f172a;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main Portfolio */
+        .pro {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #111827;
+            color: white;
+            text-align: center;
+            padding-bottom: 60px;
+        }
+
+        /* Main Heading */
+        .pro > h1 {
+            font-family: "Caudex", serif;
+            font-weight: 700;
+            color: #458a96;
+            font-size: 40px;
+            padding-top: 25px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        ul li a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 18px;
+            margin: 5px;
+            color: white;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: #458a96;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Project Section Heading */
+        .project-heading {
+            margin-top: 45px;
+        }
+
+        .project-heading h1 {
+            font-family: "Caudex", serif;
+            font-size: 35px;
+            color: #458a96;
+        }
+
+        .project-heading h4 {
+            color: #dbeafe;
+            margin-top: 10px;
+            font-size: 17px;
+            font-weight: normal;
+        }
+
+        /* Job Portal Card */
+        .job {
+            width: 80%;
+            min-height: 570px;
+            border-radius: 18px;
+            background-color: #849dc0;
+            color: #f9fafb;
+            margin: 50px auto;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            transition: 0.4s ease;
+        }
+
+        .job:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(69, 138, 150, 0.35);
+        }
+
+        .job h2,
+        .port h2 {
+            font-family: "Capriola", sans-serif;
+            font-weight: 700;
+            color: #111827;
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+
+        .job h3,
+        .port h3 {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            line-height: 1.6;
+            font-size: 18px;
+            color: #f9fafb;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Technology Tags */
+        .job span,
+        .port span {
+            display: inline-block;
+            margin: 20px 5px 10px;
+            border-radius: 20px;
+            background: #fefefe;
+            color: #353634;
+            padding: 7px 15px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .job span:hover,
+        .port span:hover {
+            background-color: #111827;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Slideshow */
+        .container {
+            width: 90%;
+            height: 300px;
+            margin: 35px auto 10px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background-color: #111827;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .container .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            border-radius: 15px;
+        }
+
+        .container .slide.active {
+            opacity: 1;
+        }
+
+        /* Portfolio Card */
+        .port {
+            width: 80%;
+            min-height: 250px;
+            border-radius: 18px;
+            background-color: #849dc0;
+            color: #f9fafb;
+            margin: 50px auto;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            transition: 0.4s ease;
+        }
+
+        .port:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(69, 138, 150, 0.35);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            .pro > h1 {
+                font-size: 30px;
+            }
+
+            ul {
+                flex-direction: column;
+            }
+
+            .job,
+            .port {
+                width: 92%;
+            }
+
+            .container {
+                width: 100%;
+                height: 220px;
+            }
+
+            .container .slide {
+                height: 220px;
+            }
+
+            .job h3,
+            .port h3 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pro">
+
+        <!-- Portfolio Title -->
+        <h1>My Portfolio</h1>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="contact1.html">Contact</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="About1.html">About Us</a></li>
+                <li><a href="index.html">Index</a></li>
+            </ul>
+        </nav>
+
+        <!-- Project Heading -->
+        <div class="project-heading">
+            <h1>PROJECTS</h1>
+            <h4>Turning Ideas into Powerful Digital Experiences.</h4>
+        </div>
+
+
+        <!-- Job Portal Project -->
+        <div class="job">
+
+            <h2>Job Portal</h2>
+
+            <h3>
+                A modern "Job Portal" designed to connect job seekers
+                with suitable career opportunities using HTML, CSS,
+                and JavaScript.
+                <br><br>
+                The project provides a responsive, user-friendly
+                interface for browsing jobs, viewing details,
+                and exploring career opportunities.
+            </h3>
+
+            <!-- Technologies -->
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+
+            <!-- Photo Slideshow -->
+            <div class="container">
+
+                <img src="images1/job1.jpg"
+                     class="slide active"
+                     alt="Computer Science Engineering">
+
+                <img src="images1/job2.jpg"
+                     class="slide"
+                     alt="Main Campus">
+
+                <img src="images1/job3.jpg"
+                     class="slide"
+                     alt="Project Image">
+
+                <img src="images1/job4.jpg"
+                     class="slide"
+                     alt="Civil Engineering">
+
+            </div>
+
+        </div>
+
+
+        <!-- My Portfolio Project -->
+        <div class="port">
+
+            <h2>My Portfolio</h2>
+
+            <h3>
+                A professional personal portfolio website built with
+                HTML, CSS, and JavaScript to showcase my skills,
+                projects, education, achievements, and experience.
+            </h3>
+
+            <!-- Technologies -->
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript Slideshow -->
+    <script>
+
+        let currentSlide = 0;
+
+        const slides = document.querySelectorAll(".slide");
+
+        function showSlide() {
+
+            slides.forEach(function(slide) {
+                slide.classList.remove("active");
+            });
+
+            slides[currentSlide].classList.add("active");
+
+            currentSlide++;
+
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+        }
+
+        // Change image every 3 seconds
+        setInterval(showSlide, 3000);
+
+    </script>
+
+</body>
+
+</html>
+```

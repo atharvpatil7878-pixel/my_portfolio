@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap');
+       
+        .g{
+             width: 1580px;
+            height: 750px;
+            border-radius: 20px;
+    background-color: #111827;
+        }
+        h2{
+            color:cyan ;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        #pic{
+            width: 450px;
+            height: 450px;
+            border-radius: 350px;
+            margin-top: 190px;
+            margin-bottom: 0px;
+            margin-right: 10px;
+            margin-left: 280px;
+            border: 3px solid black;
+            padding: 5px;
+            
+        }
+        flip-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+   border-radius: 350px;
+  text-align: center;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(360deg);
+  transition: 2s;
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+   border-radius: 350px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  
+}
+
+/* Ensure the image fills the front side fully */
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 350px;
+  object-fit: cover;
+   position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-card-back {
+    position: absolute;
+  color: white;
+  transform: rotateY(360deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+        #t{
+            margin-top: 250px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+        }
+        .p{
+           transform:rotateX('360deg');
+            transition: 2s;
+        }
+         ul{
+    background-color: black;
+    color: white;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    height: 60px;
+   }
+
+   ul li{
+    float: right;
+   }
+
+   ul li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+   }
+   h1{
+    color: #43a4bd;
+    font-family: "Caacupe One", sans-serif;
+    font-size: 35px;
+    
+   }
+   #LM{
+    width:120PX;
+    height: 40PX;
+    border: 2px solid black;
+   background: hsl(240, 19%, 40%);
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+   }
+   #ml{
+    width:120PX;
+    height: 40PX;
+    border: 2px solid black;
+    background: hsl(240, 19%, 40%);
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+   }
+   p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   color: #98b1da;
+   }
+   h3{
+    color: #e2eaeb;
+   }
+   h4{
+    color: #e2eaeb;
+   }
+    </style>
+</head>
+<body>
+    <div class="g">
+         <nav>
+           
+        <ul>
+           <li style="float: left;"><h1>My Portfolio</h1></li>
+          
+        <li><a href="education.html">Contact</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="About1.html">About us</a></li>
+        <li><a href="index.html">Index</a></li>
+    </ul>
+    </nav>
+        
+
+       
+            <div class="row">
+            <div class="col-sm-6">
+                <div id="t">
+            <p>HELLO I AM,</p><br>
+               <h2>ATHARV PATIL,</h2><br>
+               <h3>Web Developer</h3><br>
+               <h4> I create modern, responsive, and visually engaging websites that bring creative ideas to life.
+                Turning innovative ideas into powerful digital experiences with clean code and creative design. 🚀</h4><br>
+            <div class="row">
+                    <div class="col-sm-3">
+                <div id="LM">
+            <a href="learn.html">LEARN MORE</a>
+        </div>
+        </div>
+        <div class="col-sm-3">
+         <div id="ml">
+            <a href="">HIRE ME</a>
+        </div>
+        </div>
+        
+        </div>
+                </div>
+        </div>
+        
+        <div class="col-sm-6">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                <img id="pic" src="images/atharv.jpg" alt="flip-image">
+            </div>
+           
+            </div>
+        </div>
+        </div>
+        </div>
+        
+        </div>
+    
+    
+</body>
+</html>
